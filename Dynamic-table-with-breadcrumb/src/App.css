@@ -3,6 +3,9 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #85586f;
+  font-family: "Nunito Sans", sans-serif;
+  color: #000000;
 }
 
 .logo {
