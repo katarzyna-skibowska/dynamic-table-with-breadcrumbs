@@ -1,12 +1,12 @@
 import "./App.css";
-import Table from "./components/Table";
+import Table from "./Components/Table";
 
 function App() {
   return (
-    <>
-      <h2>Books world</h2>
+    <div>
+      <h2>Welcome to books world!</h2>
       <Table />
-    </>
+    </div>
   );
 }
 
