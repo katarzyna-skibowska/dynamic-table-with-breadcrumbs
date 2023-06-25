@@ -1,0 +1,12 @@
+.selected,
+.selected:hover {
+  background-color: rgb(112, 165, 165);
+}
+
+.highlighted-row {
+  cursor: pointer;
+}
+
+.highlighted-row:hover {
+  background-color: rgb(142, 165, 165);
+}

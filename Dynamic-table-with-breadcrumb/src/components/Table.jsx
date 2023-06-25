@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import "./Table.styles.css";
 
-export default function Table() {
+const Table = () => {
   const [books, setBooks] = useState([]);
+  const [highlightRow, setHighlightRow] = useState(-1);
+
   useEffect(() => {
     fetch(
       "https://www.googleapis.com/books/v1/volumes?q=frontend&key=AIzaSyAS4eXdujBLeYR_MFMiBI1eRHZyVjQynv8"
@@ -28,8 +31,13 @@ export default function Table() {
         </thead>
         {books.map((book, index) => {
           return (
-            <tbody key={book.id}>
-              <tr>
+            <tbody key={index}>
+              <tr
+                onClick={() => setHighlightRow(book.id)}
+                className={"highlighted-row ".concat(
+                  highlightRow === book.id ? "selected" : ""
+                )}
+              >
                 <td>{index + 1}</td>
                 <td>{book.volumeInfo.authors} </td>
                 <td>{book.volumeInfo.title}</td>
@@ -44,4 +52,6 @@ export default function Table() {
       </table>
     </>
   );
-}
+};
+
+export default Table;
