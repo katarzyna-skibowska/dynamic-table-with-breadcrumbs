@@ -1,12 +1,21 @@
 import "./App.css";
-import Table from "./Components/Table";
+import HomePage from "./components/HomePage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Table from "./components/Table";
+import Breadcrumbs from "./components/Breadcrumbs";
+// import TableRow from "./components/TableRow";
 
 function App() {
   return (
-    <div>
-      <h2>Welcome to books world!</h2>
-      <Table />
-    </div>
+    <>
+      <Breadcrumbs />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/books" element={<Table />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
