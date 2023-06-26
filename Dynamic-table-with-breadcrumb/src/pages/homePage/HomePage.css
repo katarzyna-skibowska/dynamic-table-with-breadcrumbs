@@ -1,0 +1,18 @@
+.homepage-box {
+  background-color: #181816;
+  padding: 7em;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #f8eded;
+  color: #f8eded;
+}
+
+.button-redirect {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #f8eded;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #181816;
+  margin-bottom: 21.44px;
+}

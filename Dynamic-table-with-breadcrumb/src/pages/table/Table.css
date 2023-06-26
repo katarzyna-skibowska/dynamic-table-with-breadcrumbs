@@ -1,0 +1,33 @@
+.table {
+  background-color: #181816;
+  border: 1px solid #f8eded;
+  border-radius: 5px;
+  border-spacing: 1;
+  padding: 5px;
+}
+
+.header-table {
+  color: #181816;
+}
+
+.selected,
+.selected:hover {
+  background-color: #4c4b4a;
+}
+
+.highlighted-row {
+  cursor: pointer;
+}
+
+.highlighted-row:hover {
+  background-color: #4c4b4a;
+}
+
+.details {
+  padding: 30px;
+  margin: 10px;
+}
+
+td {
+  padding: 10px;
+}

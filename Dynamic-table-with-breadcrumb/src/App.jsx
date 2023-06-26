@@ -1,9 +1,8 @@
 import "./App.css";
-import HomePage from "./components/HomePage";
+import HomePage from "./pages/homePage/HomePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Table from "./components/Table";
+import Table from "./pages/table/Table";
 import Breadcrumbs from "./components/Breadcrumbs";
-// import TableRow from "./components/TableRow";
 
 function App() {
   return (

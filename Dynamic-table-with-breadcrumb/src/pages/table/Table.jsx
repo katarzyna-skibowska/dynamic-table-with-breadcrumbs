@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Table.styles.css";
+import "./Table.css";
 
 const Table = () => {
   const [books, setBooks] = useState([]);
@@ -19,17 +19,16 @@ const Table = () => {
 
   return (
     <>
-      <h2>Books library</h2>
+      <h1 className="header-table">Books library</h1>
       <table className="table">
-        <thead className="thead">
+        <thead>
           <tr>
             <th>NO</th>
             <th>AUTHOR</th>
             <th>TITLE</th>
-            <th>SUBTITLE</th>
             <th>PUBLISHER</th>
             <th>BOOK LANGUAGE</th>
-            <th>CATEGORIES</th>
+            <th>CATEGORY</th>
           </tr>
         </thead>
         {books.map((book, index) => {
@@ -50,7 +49,6 @@ const Table = () => {
                 <td>{index + 1}</td>
                 <td>{book.volumeInfo.authors} </td>
                 <td>{book.volumeInfo.title}</td>
-                <td>{book.volumeInfo.subtitle}</td>
                 <td>{book.volumeInfo.publisher}</td>
                 <td>{book.volumeInfo.language}</td>
                 <td>{book.volumeInfo.categories}</td>
@@ -58,12 +56,14 @@ const Table = () => {
               <>
                 {showDetails === true && highlightRow === book.id ? (
                   <tr>
-                    <td colSpan={7} className="details">
+                    <td colSpan={6} className="details">
                       <h4> Book description: </h4>
                       {book.volumeInfo.description}
                     </td>
                   </tr>
-                ) : null}
+                ) : (
+                  ""
+                )}
               </>
             </tbody>
           );
